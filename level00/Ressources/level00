@@ -1,0 +1,1 @@
+cat `find / -user flag00 2> /dev/null` | tr '[p-za-o]' '[a-z]'

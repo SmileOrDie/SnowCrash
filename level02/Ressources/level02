@@ -1,0 +1,9 @@
+scp -P 4242 level02@[IP]:/home/user/level02/* .
+
+install wireshark
+suivre le flux TCP
+
+
+...
+Password: ft_wandr...NDRel.L0L
+...
