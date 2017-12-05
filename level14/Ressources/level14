@@ -1,0 +1,8 @@
+echo 'b * 0x0804898e
+b * 0x08048b02
+r
+set $eax=0
+c
+set $eax=3014
+c
+' | gdb getflag

